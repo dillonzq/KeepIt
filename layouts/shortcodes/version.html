@@ -3,7 +3,7 @@
 {{- $type := .Get 1 | default "new" | lower -}}
 {{- $label := T $type -}}
 {{- $color := cond (eq $type "changed") "ff9101" "00b1ff" | cond (eq $type "deleted") "ff5252" -}}
-{{- $pathTemplate := cond .Site.IsMultiLingual (printf "svg/version/%%v-%%v.%v.svg" .Page.Language.Lang) "svg/version/%v-%v.svg" -}}
+{{- $pathTemplate := cond hugo.IsMultilingual (printf "svg/version/%%v-%%v.%v.svg" .Page.Language.Lang) "svg/version/%v-%v.svg" -}}
 {{- $path := printf $pathTemplate $version $type -}}
 {{- $resource := resources.Get "svg/version.template.svg" -}}
 {{- $resource = $resource | resources.ExecuteAsTemplate $path (dict "version" $version "label" $label "color" $color) | minify -}}
