@@ -678,6 +678,7 @@ class Theme {
                 });
                 this.switchThemeEventSet.add(this._giscusOnSwitchTheme);
             }
+            if (this.config.comment.waline) Waline.init(this.config.comment.waline);
         }
     }
 

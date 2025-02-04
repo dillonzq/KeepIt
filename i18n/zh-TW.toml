@@ -59,6 +59,9 @@ other = "你的評論 ..."
 
 [facebookLanguageCode]
 other = "zh_TW"
+
+[walineLang]
+other = "zh-TW"
 # === partials/comment.html ===
 
 # === partials/assets.html ===

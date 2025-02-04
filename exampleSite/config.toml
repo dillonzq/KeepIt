@@ -589,6 +589,15 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         lazyLoading = false
         lightTheme = "light"
         darkTheme = "dark"
+      # Waline comment config (https://waline.js.org/)
+      # Waline 评论系统设置 (https://waline.js.org/)
+      [params.page.comment.waline]
+        enable = false
+        serverURL = "https://love-it-waline.vercel.app"
+        # automatically adapt the current theme i18n configuration when empty
+        # 为空时自动适配当前主题 i18n 配置
+        lang = ""
+        emoji = ["https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"]
     # Third-party library config
     # 第三方库配置
     [params.page.library]

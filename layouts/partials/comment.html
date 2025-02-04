@@ -146,6 +146,23 @@
                 Please enable JavaScript to view the comments powered by <a href="https://giscus.app">Giscus</a>.
             </noscript>
         {{- end -}}
+
+        {{- /* Waline Comment System */ -}}
+        {{- $waline := $comment.waline | default dict -}}
+        {{- if $waline.enable -}}
+            <div id="waline" class="comment"></div>
+            {{- $source := $cdn.walineCSS | default "lib/waline/waline.css" -}}
+            {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
+            {{- $source := $cdn.walineJS | default "lib/waline/waline.js" -}}
+            {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- $commentConfig = dict "el" "#waline" "serverURL" $waline.serverURL "lang" ($waline.lang | default (T "walineLang")) | dict "waline" | merge $commentConfig -}}
+            {{- with $waline.emoji -}}
+                {{- $commentConfig = dict "emoji" . | dict "waline" | merge $commentConfig -}}
+            {{- end -}}
+            <noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://waline.js.org/">Waline</a>.
+            </noscript>
+        {{- end -}}
     </div>
 {{- end -}}
 

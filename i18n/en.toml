@@ -61,6 +61,9 @@ other = "en_US"
 
 [giscusLang]
 other = "en"
+
+[walineLang]
+other = "en"
 # === partials/comment.html ===
 
 # === partials/assets.html ===

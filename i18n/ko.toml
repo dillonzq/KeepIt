@@ -62,6 +62,9 @@ other = "ko-KR"
 
 [giscusLang]
 other = "ko"
+
+[walineLang]
+other = "en"
 # === partials/comment.html ===
 
 # === partials/assets.html ===

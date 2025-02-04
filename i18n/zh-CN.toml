@@ -62,6 +62,9 @@ other = "zh_CN"
 
 [giscusLang]
 other = "zh-CN"
+
+[walineLang]
+other = "zh-CN"
 # === partials/comment.html ===
 
 # === partials/assets.html ===
