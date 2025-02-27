@@ -7,7 +7,7 @@
 
 <meta name="application-name" content="{{ .Site.Params.app.title | default .Site.Title }}">
 <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.app.title | default .Site.Title }}">
-
+<meta name="referrer" content="no-referrer" />
 {{- with .Site.Params.app.themeColor -}}
     <meta name="theme-color" content="{{ . }}">
 {{- end -}}
