@@ -13,7 +13,8 @@
     {{- with .Site.Params.app.iconColor -}}
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="{{ . }}">
     {{- end -}}
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.10/pwacompat.min.js" integrity="sha384-I1iiXcTSM6j2xczpDckV+qhhbqiip6FyD6R5CpuqNaWXvyDUvXN5ZhIiyLQ7uuTh" crossorigin="anonymous"></script>
 {{- end -}}
 
 <link rel="canonical" href="{{ .Permalink }}" />

@@ -9,8 +9,25 @@
         {{- $disqus := $comment.disqus | default dict -}}
         {{- if $disqus.enable -}}
             <div id="disqus_thread" class="comment"></div>
+            {{- if $disqus.proxy -}}
+                <script src="https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqus.js"></script>
+                <script>
+                    var dsqjs = new DisqusJS({
+                        shortname: {{ .Site.Params.page.comment.disqus.shortname }},
+                        siteName: {{ .Site.Params.title }},
+                        identifier: {{ if .Params.identifier }}{{ trim .Params.identifier "/" }}{{ else }}{{ trim .RelPermalink "/" }}{{end}},
+                        url: {{ if .Params.identifier }}"{{ trim .Site.BaseURL "/" }}{{ .Params.identifier }}"{{ else }}{{ .Permalink }}{{end}},
+                        title: {{ .Title }},
+                        api: {{ .Site.Params.page.comment.disqus.api }},
+                        apikey: {{ .Site.Params.page.comment.disqus.apikey }},
+                        admin: {{ .Site.Params.page.comment.disqus.admin }},
+                        adminLabel: {{ .Site.Params.page.comment.disqus.adminLabel }}
+                    });
+                </script>
+            {{- else -}}
             {{- $source := printf "https://%v.disqus.com/embed.js" $disqus.shortname -}}
             {{- dict "Source" $source "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- end -}}
             <noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
             </noscript>

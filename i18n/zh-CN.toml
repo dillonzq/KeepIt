@@ -201,3 +201,8 @@ other = "更改"
 [deleted]
 other = "删除"
 # === shortcodes/version.html ===
+
+# === single/footer.html ===
+[RelatedPosts]
+other = "您可能还喜欢："
+# === single/footer.html ===

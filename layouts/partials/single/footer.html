@@ -2,6 +2,18 @@
 
 <div class="post-footer" id="post-footer">
     <div class="post-info">
+        <div class="related-posts">
+            {{- if ( .Params.RelatedPosts | default true ) -}}
+            </br>
+            <b>{{- printf (T "RelatedPosts") -}}</b>
+            {{ range first 5 ( where ( where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags ) "Permalink" "!=" .Permalink ) }}
+                <li class="relatedPost">
+                    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a><br />
+                    {{ .Description | markdownify }}
+                </li>
+            {{ end }}
+            {{- end -}}   
+        </div>
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>

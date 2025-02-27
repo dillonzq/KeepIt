@@ -1,0 +1,262 @@
+{{- $index := slice -}}
+{{- range $page := $.Site.RegularPages -}}
+  {{- $cleaned := slice -}}
+  {{- $cleaned = $page.Plain}}
+  {{- $cleaned = replace $cleaned "\r" ""}}
+  {{- $cleaned = replace $cleaned "\n" ""}}
+  {{- $cleaned = replace $cleaned "\u0026rsquo;" "'"}}
+  {{- $cleaned = replace $cleaned "\u0026amp;" "&"}}
+  {{- $cleaned = replace $cleaned "\u0026#34;" "\""}}
+  {{- $cleaned = replace $cleaned "\u0026#39;" "'"}}
+  {{- $cleaned = replace $cleaned "\u0026ndash;" "-"}}
+  {{- $cleaned = replace $cleaned "\u0026gt;" ">"}}
+  {{- $cleaned = replace $cleaned "\u0026quot;" "\""}}
+  {{- $cleaned = replace $cleaned "\u0026ldquo;" "“"}}
+  {{- $cleaned = replace $cleaned "\u0026rdquo;" "”"}}
+  {{- $chunked := slice -}}
+  {{- $chunked = $chunked | append (substr $cleaned 0 500) -}}
+  {{- if gt (countwords $cleaned) 500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 1000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 1000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 1500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 1500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 2000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 2000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 2500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 2500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 3000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 3000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 3500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 3500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 4000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 4000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 4500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 4500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 5000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 5000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 5500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 5500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 6000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 6000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 6500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 6500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 7000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 7000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 7500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 7500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 8000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 8000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 8500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 8500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 9000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 9000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 9500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 9500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 10000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 10000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 10500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 10500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 11000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 11000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 11500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 11500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 12000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 12000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 12500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 12500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 13000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 13000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 13500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 13500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 14000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 14000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 14500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 14500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 15000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 15000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 15500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 15500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 16000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 16000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 16500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 16500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 17000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 17000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 17500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 17500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 18000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 18000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 18500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 18500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 19000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 19000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 19500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 19500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 20000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 20000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 20500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 20500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 21000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 21000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 21500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 21500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 22000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 22000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 22500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 22500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 23000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 23000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 23500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 23500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 24000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 24000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 24500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 24500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 25000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 25000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 25500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 25500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 26000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 26000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 26500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 26500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 27000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 27000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 27500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 27500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 28000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 28000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 28500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 28500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 29000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 29000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 29500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 29500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 30000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 30000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 30500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 30500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 31000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 31000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 31500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 31500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 32000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 32000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 32500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 32500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 33000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 33000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 33500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 33500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 34000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 34000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 34500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 34500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 35000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 35000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 35500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 35500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 36000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 36000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 36500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 36500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 37000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 37000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 37500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 37500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 38000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 38000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 38500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 38500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 39000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 39000 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 39500 }}
+    {{- $chunked = $chunked | append (substr $cleaned 39500 500) -}}
+  {{- end -}}
+  {{- if gt (countwords $cleaned) 40000 }}
+    {{- $chunked = $chunked | append (substr $cleaned 40000 500) -}}
+  {{- end -}}
+  {{- range $i, $c := $chunked -}}
+    {{- $index = $index | append (dict "objectID" (print $page.File.UniqueID "_" $i) "content" $c "order" $i "title" $page.Title "date" $page.Date "url" $page.Permalink "tags" $page.Params.tags "categories" $page.Params.Categories) -}}
+  {{- end -}}
+{{- end -}}
+{{- $index | jsonify -}}

@@ -6,7 +6,7 @@
     {{- $toc := $params.toc -}}
     {{- if eq $toc true -}}
         {{- $toc = .Site.Params.page.toc | default dict -}}
-    {{- else if eq $toc false -}}
+    {{- else -}}
         {{- $toc = dict "enable" false -}}
     {{- end -}}
 

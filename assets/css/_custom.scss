@@ -2,3 +2,26 @@
 // Custom style
 // 自定义样式
 // ==============================
+.app-refresh {
+    background: #000;
+    height: 0;
+    line-height: 3em;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 42;
+    padding: 0 1em;
+    transition: all .3s ease;
+}
+.app-refresh-wrap {
+    display: flex;
+    color: #fff;
+}
+.app-refresh-wrap label {
+    flex: 1;
+}
+.app-refresh-show {
+    height: 3em;
+}

@@ -196,3 +196,8 @@ other = "CHANGED"
 [deleted]
 other = "DELETED"
 # === shortcodes/version.html ===
+
+# === single/footer.html ===
+[RelatedPosts]
+other = "You might also like..."
+# === single/footer.html ===
